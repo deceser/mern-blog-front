@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.main__page {
+  margin-top: 20px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: $breakpoint__lg) {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}

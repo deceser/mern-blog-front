@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+
+.comment__block {
+  padding: 5px;
+  width: 650px;
+  max-height: 570px;
+  border: 1px solid $color-primary;
+  background-color: $color-white;
+  overflow: auto;
+}
+
+.comment__item {
+  border: 1px solid $color-primary;
+  padding: 4px;
+  margin-bottom: 5px;
+
+  .item__delete {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+
+    .comment__user {
+      h4 {
+        color: $color-black;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .comment__text {
+    h4 {
+      font-size: 14px;
+    }
+  }
+
+  .icon__delete {
+    display: flex;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+    &:hover {
+      opacity: 0.7;
+      color: $color-error;
+    }
+  }
+
+  .visibilyti {
+    visibility: hidden;
+  }
+}

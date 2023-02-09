@@ -1,0 +1,108 @@
+@import "../../../styles/variables";
+
+.inputUi {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    color: $color-primary;
+    transition: 0.2s all;
+    cursor: text;
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-primary;
+    box-shadow: none;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+
+    &:focus {
+      border-color: $color-secondary;
+    }
+  }
+
+  input:focus ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-secondary;
+  }
+
+  input:valid ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-secondary;
+  }
+}
+
+.errors__input {
+  position: relative;
+  width: 100%;
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    color: $color-error;
+    transition: 0.2s all;
+    cursor: text;
+  }
+
+  input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 2px solid $color-error;
+    box-shadow: none;
+    color: $color-black;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent;
+
+    &:focus {
+      border-color: $color-error;
+    }
+  }
+
+  input:focus ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-error;
+  }
+
+  input:valid ~ label {
+    font-size: 14px;
+    top: -24px;
+    color: $color-error;
+  }
+}
+
+.error__span {
+  color: $color-error;
+  line-height: 20px;
+}

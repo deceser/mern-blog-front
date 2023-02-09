@@ -1,0 +1,33 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    width: 1200px;
+  }
+
+  @media screen and (max-width: $breakpoint__lg) {
+    width: 992px;
+  }
+}

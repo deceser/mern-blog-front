@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.postId__page {
+  margin-top: 10px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 25px;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px 25px;
+  }
+
+  @media screen and (max-width: $breakpoint__lg) {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px 25px;
+  }
+}
+
+.textfield {
+  margin-top: 10px;
+}

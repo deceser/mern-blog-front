@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.login__page {
+  width: 400px;
+  height: 600px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+
+  .btn__form {
+    display: flex;
+    gap: 30px;
+  }
+}

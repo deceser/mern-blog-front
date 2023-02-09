@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
-function App() {
+import { getMe } from "./redux/slices/user/auth";
+
+import AppRouter from "./AppRouter";
+import ToastContainer from "./ToastContainer";
+import DefaultLayout from "./layouts/default.layout";
+
+import Loader from "./components/ui/loader";
+
+const App = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+  const isLoading = useSelector((state) => state.auth.isLoading);
+
+  // -------------------------------------------------------------
+
+  // auth me
+
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      dispatch(getMe());
+    }
+  }, []);
+
+  // -------------------------------------------------------------
+
+  // notification warn (confirm email)
+
+  React.useEffect(() => {
+    if (user?.activated === false) {
+      toast.warning("Please confirm your email");
+    }
+  }, [user]);
+
+  // -------------------------------------------------------------
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DefaultLayout>
+      {isLoading ? <Loader /> : <AppRouter />}
+      <ToastContainer />
+    </DefaultLayout>
   );
-}
+};
 
 export default App;

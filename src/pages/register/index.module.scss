@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.register__page {
+  width: 400px;
+  height: 600px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .register__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+}

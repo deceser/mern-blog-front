@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+
+.searchUi {
+  border: 2px solid $color-primary;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 100%;
+  height: 45px;
+
+  input {
+    border: none;
+    width: 300px;
+    background-color: transparent;
+    color: $color-black;
+    font-size: 14px;
+
+    @media screen and (max-width: $breakpoint__xl) {
+      width: 270px;
+    }
+
+    @media screen and (max-width: $breakpoint__lg) {
+      width: 200px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .searchUi__icon {
+    padding: 0 5px;
+  }
+}

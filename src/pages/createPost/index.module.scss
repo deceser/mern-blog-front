@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+
+.createPost__page {
+  width: 500px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .image {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .textfield {
+    height: 400px;
+    width: 100%;
+  }
+}
