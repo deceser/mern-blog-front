@@ -17,7 +17,7 @@ Runs the app in the development mode.\
 ### `Congratulations! Application are ready to work.`
 
 
-### `Stack of tools.`
+### `Stack of tools:`
 
     React-JS
     React-router 
