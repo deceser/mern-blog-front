@@ -20,6 +20,12 @@ Runs the app in the development mode.\
 ### `Stack of tools.`
 
     React-JS
+    React-router 
+    Redux-toolkit (state manager)
+    Axios (to get data from the server)
+    React-hook-form (for validation)
+    SCSS-Module
+    
 
 
 
