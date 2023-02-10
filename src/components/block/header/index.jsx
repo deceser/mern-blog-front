@@ -54,7 +54,7 @@ const Header = () => {
           ]}
         />
       </div>
-      <NavbarUi handleLogout={handleLogout} />
+      <NavbarUi user={user} handleLogout={handleLogout} />
     </header>
   );
 };
