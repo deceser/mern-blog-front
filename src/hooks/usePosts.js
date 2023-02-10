@@ -5,10 +5,8 @@ import React from "react";
 export const useSortedPosts = (posts, sort) => {
   const selectSortPost = React.useMemo(() => {
     if (sort) {
-      return [...posts].sort((a, b) => b[sort] - a[sort] || a[sort].localeCompare(b[sort]));
-
-      //  b[sort] - a[sort] sorted number (views)
-      //  a[sort].localeCompare(b[sort]) sorted string (title, text)
+      console.log(sort);
+      return [...posts].sort((a, b) => (a[sort] < b[sort] ? 1 : -1));
     }
     return posts;
   }, [posts, sort]);
