@@ -29,7 +29,7 @@ export const authSlice = createSlice({
     },
     [getMe.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.user = action.payload.user;
+      state.user = action.payload;
       state.accessToken = action.payload;
     },
     [getMe.rejected]: (state) => {
