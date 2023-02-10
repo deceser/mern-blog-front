@@ -14,6 +14,7 @@ import style from "./index.module.scss";
 const Header = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
+  console.log(user);
   const posts = useSelector((state) => state.posts.post);
 
   // -------------------------------------------------------------
@@ -42,7 +43,7 @@ const Header = () => {
   return (
     <header className={style.header}>
       <div className={style.header__left}>
-        <h4>{user.username}</h4>
+        <h4>{user.user?.username}</h4>
         <SearchUi value={filter.search} onChange={(e) => setFilter({ ...filter, search: e.target.value })} />
         <SelectUi
           onChange={(sortSelect) => setFilter({ ...filter, sort: sortSelect })}
