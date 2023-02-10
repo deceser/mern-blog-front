@@ -30,7 +30,7 @@ export const registrationSlice = createSlice({
     },
     [registrationUser.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.user = action.payload.user;
+      state.user = action.payload;
       state.status = action.payload;
       state.accessToken = action.payload;
       state.refreshToken = action.payload;
