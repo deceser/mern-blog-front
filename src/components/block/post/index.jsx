@@ -59,10 +59,10 @@ const Post = ({ obj }) => {
         </div>
 
         <div className={style.icon}>
-          <div className={user?.id === obj.user?._id ? style.delete : style.visibilyti}>
+          <div className={user.user?.id === obj.user?._id ? style.delete : style.visibilyti}>
             <AiOutlineDelete onClick={handleDeletePost} size={22} />
           </div>
-          <div className={user?.id === obj.user?._id ? style.update : style.visibilyti}>
+          <div className={user.user?.id === obj.user?._id ? style.update : style.visibilyti}>
             <NavLink to={`/posts/${obj._id}/edit`}>
               <BsPencil size={20} />
             </NavLink>
