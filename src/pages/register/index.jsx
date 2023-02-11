@@ -13,6 +13,7 @@ import style from "./index.module.scss";
 const Register = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
