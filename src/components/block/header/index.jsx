@@ -14,7 +14,6 @@ import style from "./index.module.scss";
 const Header = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  console.log(user);
   const posts = useSelector((state) => state.posts.post);
 
   // -------------------------------------------------------------
@@ -22,8 +21,8 @@ const Header = () => {
   // logout
 
   const handleLogout = async () => {
-    dispatch(logout());
     localStorage.removeItem("token");
+    dispatch(logout());
   };
 
   // -----------------------------------------------------------------
