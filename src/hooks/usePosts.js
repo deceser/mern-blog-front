@@ -6,7 +6,7 @@ export const useSortedPosts = (posts, sort) => {
   const selectSortPost = React.useMemo(() => {
     if (sort) {
       console.log(sort);
-      return [...posts].sort((a, b) => (a[sort] < b[sort] ? 1 : -1));
+      return [...posts].sort((a, b) => (a[sort] > b[sort] ? 1 : -1));
     }
     return posts;
   }, [posts, sort]);
