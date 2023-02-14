@@ -40,7 +40,7 @@ const CommentItem = ({ obj }) => {
         <div className={style.comment__user}>
           <h4>{obj.user?.username}</h4>
         </div>
-        <div className={user?.id === obj.user?._id ? style.icon__delete : style.visibilyti}>
+        <div className={user?.user.id === obj.user?._id ? style.icon__delete : style.visibilyti}>
           <AiOutlineDelete size={21} onClick={handleDeleteComment} />
         </div>
       </div>
