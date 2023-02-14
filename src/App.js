@@ -30,7 +30,7 @@ const App = () => {
   // notification warn (confirm email)
 
   React.useEffect(() => {
-    if (user?.activated === false) {
+    if (user?.user.activated === false) {
       toast.warning("Please confirm your email");
     }
   }, [user]);
