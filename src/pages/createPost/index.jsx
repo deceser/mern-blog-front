@@ -26,7 +26,7 @@ const CreatePost = () => {
 
   // -------------------------------------------------------------
 
-  // update post
+  // edit post
 
   const isUpdate = Boolean(id);
 
