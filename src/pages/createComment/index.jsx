@@ -12,7 +12,6 @@ import CommentList from "../../components/block/comment/CommentList";
 
 import TextField from "../../components/ui/textField";
 import ButtonDefault from "../../components/ui/buttonDefault";
-import Loader from "../../components/ui/loader";
 
 import style from "./index.module.scss";
 
@@ -21,7 +20,6 @@ const CreateComment = () => {
   const dispatch = useDispatch();
   const post = useSelector((state) => state.onePost.post);
   const user = useSelector((state) => state.auth.user);
-  const isLoading = useSelector((state) => state.getCommentOfPost.isLoading);
   const comments = useSelector((state) => state.getCommentOfPost.comment);
 
   const [text, setComment] = React.useState("");
@@ -47,7 +45,7 @@ const CreateComment = () => {
     try {
       await dispatch(createComment({ id, text, userId }));
       await dispatch(getCommentsOfPost({ id }));
-      toast.success("Sccess");
+      toast.success("Success");
       setComment("");
     } catch (error) {
       console.log(error);
